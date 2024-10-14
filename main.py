@@ -35,10 +35,11 @@ schedule.every().wednesday.at("19:00").do(job)
 schedule.every().thursday.at("19:00").do(job)
 schedule.every().friday.at("19:00").do(job)
 
+
 # schedule.every(2).minutes.do(job)
 
 while True:
-    if is_time_to_run(19, 0, 'America/Sao_Paulo'):  # GMT-3
+    if is_time_to_run(19, 00, 'America/Argentina/Buenos_Aires'):  # GMT-3
         schedule.run_pending()
     time.sleep(60)  # Esperar un minuto antes de verificar nuevamente
 
